@@ -1,12 +1,12 @@
 {{- if .Values.ingress.enabled -}}
-{{- $serviceName := include "edgnetwork.fullname" . -}}
+{{- $serviceName := include "edgenetwork.fullname" . -}}
 {{- $servicePort := .Values.service.externalPort -}}
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: {{ template "edgnetwork.fullname" . }}
+  name: {{ template "edgenetwork.fullname" . }}
   labels:
-    app: {{ template "edgnetwork.name" . }}
+    app: {{ template "edgenetwork.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
