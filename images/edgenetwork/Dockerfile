@@ -1,7 +1,7 @@
 FROM amd64/busybox
 
-MAINTAINER admin@edgnetwork.cloud
+MAINTAINER admin@edgenetwork.cloud
 
-ADD edgnetwork/index.html /www/index.html
+ADD edgenetwork/index.html /www/index.html
 EXPOSE 80
 CMD httpd -p 80 -h /www; tail -f /dev/null
